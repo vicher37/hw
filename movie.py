@@ -6,8 +6,8 @@ def costars():
     df = read_csv('/Users/vickyzhang/Documents/MSBA/programming/hw1/movies.csv', header=None)
 
     # ask user for inputs
-    movie1 = raw_input("Please input movie 1")
-    movie2 = raw_input("Please input movie 2")
+    movie1 = raw_input("Please input movie 1 ")
+    movie2 = raw_input("Please input movie 2 ")
 
     # check inputs, make sure they are all strings before processing
     for movie in [movie1, movie2]:
