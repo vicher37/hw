@@ -32,19 +32,23 @@ def costars():
     # find actors in movie 1 but not in movie 2, save in in_1_not_in_2
     same_actors = []
     in_1_not_in_2 = []
-    not_in_movie2 = True
+
     for actor1 in actors_movie1:
+        # have to re-initiate the status variable each time you get a new actor1!
+        not_in_movie2 = True
         for actor2 in actors_movie2:
             if actor1 == actor2:
                 same_actors.append(actor1)
                 not_in_movie2 = False
+                break
         if not_in_movie2 == True:
             in_1_not_in_2.append(actor1)
 
     # find actors in movie 2 but not in movie 1, save in in_2_not_in_1
     in_2_not_in_1 = []
-    not_in_movie1 = True
     for actor2 in actors_movie2:
+        # have to re-initiate the status variable each time you get a new actor2!
+        not_in_movie1 = True
         for actor1 in actors_movie1:
             if actor2 == actor1:
                 not_in_movie1 = False
